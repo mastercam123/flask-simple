@@ -30,7 +30,7 @@ jobs:
 
       - name: Build, tag, and push Docker image to Amazon ECR
         env:
-          ECR_REGISTRY: ${{ secrets.ECR_URL }}
+          ECR_URL: ${{ secrets.ECR_URL }}
           VERSION_TAG: latest-${{ github.run_number }}
         run: bash ./build_image.sh
 
